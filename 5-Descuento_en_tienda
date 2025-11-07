@@ -1,0 +1,14 @@
+#Descuento en tienda
+#Solicita el monto de un compra；
+#Si es mayor a 1000, aplica un 10% de descuento;
+#Si no, muestra el precio normal.
+
+monto = int(input("Ingrese el monto de la compra: "))
+if monto > 1000:
+    descuento = monto * 0.10
+    monto_final = monto - descuento
+    #print(f"Se aplicó un descuento de {monto:.2f}. El monto final es {monto_final:.2f}.")
+    # o tambien 
+    print ("Se aplicó un descuento de", monto, "El monto final es", monto_final)
+else:
+    print(f"No se aplicó descuento. El monto a pagar es {monto:.2f}.")

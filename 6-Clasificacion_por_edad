@@ -1,0 +1,23 @@
+#Clasificacion por edad
+#pide la edad de una persona y classificala:
+#Menor de 12: Niño
+#Entre 12 y 17: Adolescente
+#Entre 18 y 64: Adulto
+#Mayor o igual a 65: Adulto mayor
+
+Edad = int(input("Ingrese su edad: "))
+
+if Edad < 12:
+    print("tu edad es Niño")
+       
+                    #elif o tambien if  V.V
+if Edad >= 12 and Edad <= 17:
+    print("tu edad es Adolescente",Edad)
+
+
+elif Edad >= 18 and Edad <= 64:
+    print("tu edad es Adulto")
+
+
+elif Edad >= 65:
+    print("tu edad es Adulto mayor")
