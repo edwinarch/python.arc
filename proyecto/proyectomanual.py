@@ -30,6 +30,7 @@ def main():
         SUBRAYADO = '\033[4m'            
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public static
     contra = "123"
+    contrasegundoplano = "python"
     intentos = 3
     while intentos > 0:
         # Ingresar contra
@@ -50,11 +51,12 @@ def main():
             print("__LOGIN-POS__")
             print(ColoresMain.RESET)
             print(esp)
-            
+
             while True:
                 # Consome.ReadLine()
                 entrada = getpass.getpass("Ingresa tu contraseña: ")
                 
+                #primer plano
                 if entrada == contra:
                     print(esp)
                     print(ColoresMain.VERDE,"Contraseña correcta. Acceso concedido.", ColoresMain.RESET)
@@ -66,7 +68,12 @@ def main():
                     time.sleep(1)
                     os.system('cls')
                     main2() # transportar a "main2()
-                    
+                elif entrada == contrasegundoplano:
+                    print(esp)
+                    print(ColoresMain.VERDE,"Contraseña correcta. Acceso concedido al segundo plano.", ColoresMain.RESET)
+                    time.sleep(2)
+                    os.system('cls')
+                    edwinarch() # transportar a "edwinarch()                    
                 else: # contra incorrecta y cuenta
                     
                     intentos -= 1
@@ -78,7 +85,7 @@ def main():
                         print("Contraseña incorrecta.",ColoresMain.ROJO,"No te quedan intentos. Acceso denegado.", ColoresMain.RESET)
                         print(esp)
                         exit()
-
+                
 def main2(): # static void main(); // eso de c#
     
     while True: # while(true) {} // eso de c#
@@ -186,7 +193,7 @@ def mostrar_resumen():
     esp = " "
     print(esp)
     #DEteminado
-#for por
+    #for por
     print("---------------------------------------")
 
     print(f"Descuento aplicado: ${descuento:.12f}")
@@ -194,8 +201,29 @@ def mostrar_resumen():
     print(ColoresMain.RESET)
     exit()
     
+def edwinarch():
+    #chunk
+    myworld = "Hellow this is seccond plan2"
+    esp = " "
+    class ColoresMain:
+        # Código para resetear el color
+        RESET = "\033[0m"
+        #Códigos de colores
+        ROJO = '\033[31m'
+        NEGRO = '\033[30m'
+        AMARILLO = '\033[33m'
+        AZUL = '\033[34m'
+        VERDE = '\033[32m'
+        MAGENTA = '\033[35m'
+        CIAN = '\033[36m'
+        BLANCO = '\033[37m'
+        SUBRAYADO = '\033[4m'
+    #end chunk
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public static
+    print(ColoresMain.CIAN,myworld,ColoresMain.RESET) 
+    print(esp)
+    exit()
+    
 # Cuando inicia el programa para que inicie el |def| de "main()"
 if __name__ == "__main__":
     main()
-    
-#/
