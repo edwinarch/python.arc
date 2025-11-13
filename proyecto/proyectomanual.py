@@ -32,16 +32,25 @@ def main():
     contra = "123"
     contrasegundoplano = "python"
     contrachikycroos = "chiky"
-    intentos = 3
+    intentos = 4 #4vece
     while intentos > 0:
         # Ingresar contra
         esp = " " # chunk
         
-        for numero in range(1, 50):
+        # los cargas new
+        for numero in range(1, 26):
             #Cargando sumulator |falso|
-            print("Cargando...", numero, "/50")
-            time.sleep(0.04)
-        
+            print("Cargando...", numero,"/25")
+            time.sleep(0.01)
+        for numero in range(1, 71):
+            #Cargando sumulator |falso|
+            print("Descargando shaders", numero,"/70")
+            time.sleep(0.01)
+        for numero in range(1, 26):
+            #Cargando sumulator |falso|
+            print("Descargando pack", numero,"/25")
+            time.sleep(0.01)
+                
         while True:
             time.sleep(1)
             print(esp)
@@ -55,7 +64,9 @@ def main():
 
             while True:
                 # Consome.ReadLine()
+                print(ColoresMain.AZUL,"-------------------------------------------------------------------",ColoresMain.RESET)
                 entrada = getpass.getpass("Ingresa tu contraseña: ")
+                print(ColoresMain.AZUL,"---------------------------------------------------------------",ColoresMain.RESET)
                 
                 #primer plano
                 if entrada == contra:
@@ -85,8 +96,10 @@ def main():
                     
                     intentos -= 1
                     if intentos > 0:
+                        os.system('cls')
+                        print(ColoresMain.AZUL,"---------------------------------------------------------------------",ColoresMain.RESET)
                         print(ColoresMain.ROJO + "Contraseña incorrecta. Te quedan ", intentos, " intentos. Inténtalo de nuevo: ", ColoresMain.RESET )
-                        print(esp)
+                        #print(esp)
                     else:
                         print(esp)
                         print("Contraseña incorrecta.",ColoresMain.ROJO,"No te quedan intentos. Acceso denegado.", ColoresMain.RESET)
@@ -132,7 +145,7 @@ def main2(): # static void main(); // eso de c#
             mostrar_resumen()
         elif select == '4':
             print("saliendo del programa...")
-            break
+            exit()
         else:
             print("Opción no válida. Intente de nuevo.")
 
