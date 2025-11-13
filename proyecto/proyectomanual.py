@@ -31,6 +31,7 @@ def main():
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public static
     contra = "123"
     contrasegundoplano = "python"
+    contrachikycroos = "chiky"
     intentos = 3
     while intentos > 0:
         # Ingresar contra
@@ -68,12 +69,18 @@ def main():
                     time.sleep(1)
                     os.system('cls')
                     main2() # transportar a "main2()
-                elif entrada == contrasegundoplano:
+                elif entrada == contrasegundoplano: # contra segundo plano
                     print(esp)
                     print(ColoresMain.VERDE,"Contraseña correcta. Acceso concedido al segundo plano.", ColoresMain.RESET)
                     time.sleep(2)
                     os.system('cls')
-                    edwinarch() # transportar a "edwinarch()                    
+                    edwinarch() # transportar a "edwinarch()
+                elif entrada == contrachikycroos: # contra chiky croos
+                    print(esp)
+                    print(ColoresMain.VERDE,"Contraseña correcta. Acceso concedido al plano chiky croos.", ColoresMain.RESET)
+                    time.sleep(2)
+                    os.system('cls')
+                    chikycroos() # transportar a "chikycroos()                   
                 else: # contra incorrecta y cuenta
                     
                     intentos -= 1
@@ -221,6 +228,28 @@ def edwinarch():
     #end chunk
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public static
     print(ColoresMain.CIAN,myworld,ColoresMain.RESET) 
+    print(esp)
+    exit()
+
+def chikycroos():
+    #chunk
+    myworld = "THI IS CHIKY WOLRD"
+    esp = " "
+    class ColoresMain:
+        # Código para resetear el color
+        RESET = "\033[0m"
+        #Códigos de colores
+        ROJO = '\033[31m'
+        NEGRO = '\033[30m'
+        AMARILLO = '\033[33m'
+        AZUL = '\033[34m'
+        VERDE = '\033[32m'
+        MAGENTA = '\033[35m'
+        CIAN = '\033[36m'
+        BLANCO = '\033[37m'
+        SUBRAYADO = '\033[4m'
+    #end chunk
+    print(ColoresMain.AZUL,myworld,ColoresMain.RESET)
     print(esp)
     exit()
     
