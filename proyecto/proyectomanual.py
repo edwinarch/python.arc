@@ -60,7 +60,7 @@ def main():
             time.sleep(2)
             os.system('cls')
             print(ColoresMain.AZUL)
-            print("__LOGIN-POS__")
+            print("__ __LOGIN-POS__ __")
             print(ColoresMain.RESET)
             print(esp)
 
@@ -105,6 +105,10 @@ def main():
                     intentos -= 1
                     if intentos > 0:
                         os.system('cls')
+                        print(ColoresMain.AZUL)
+                        print("__ __LOGIN-POS__ __")
+                        print(ColoresMain.RESET)
+                        print(esp)
                         print(ColoresMain.AZUL,"---------------------------------------------------------------------",ColoresMain.RESET)
                         print(ColoresMain.AMARILLO + "Contraseña incorrecta. Te quedan ", intentos, " intentos. Inténtalo de nuevo: ", ColoresMain.RESET )
                         #print(esp)
