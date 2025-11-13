@@ -52,4 +52,3 @@ def main():
             print("Opción no válida. Intente de nuevo.")
 if __name__ == "__main__":
     main()
-    
