@@ -6,14 +6,6 @@ import getpass # ocultar el textp o contr
 #from colorama import rojo # color en consola
 import random
 
-# datos
-nombProducto = []
-cantProducto = []
-precioProducto = []
-# variables globales
-total_venta = 0.0
-descuento = 0.0
-
 def main():
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
     class ColoresMain:
@@ -131,7 +123,14 @@ def main():
                         print(esp)
                         print(esp)
                         exit()
-                
+
+# datos
+nombProducto = []
+cantProducto = []
+precioProducto = []
+# variables globales
+total_venta = 0.0
+descuento = 0.0
 def main2(): # static void main(); // eso de c#
     
     while True: # while(true) {} // eso de c#
