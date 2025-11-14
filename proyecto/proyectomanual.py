@@ -6,7 +6,147 @@ import getpass # ocultar el textp o contr
 #from colorama import rojo # color en consola
 import random
 
-def main():
+def mainPos():
+    esp = " " #chunk
+    #~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
+    class ColoresMain:
+        # Código para resetear el color
+        RESET = "\033[0m"
+        #Códigos de colores
+        ROJO = '\033[31m'
+        NEGRO = '\033[30m'
+        AMARILLO = '\033[33m'
+        AZUL = '\033[34m'
+        VERDE = '\033[32m'
+        MAGENTA = '\033[35m'
+        CIAN = '\033[36m'
+        BLANCO = '\033[37m'
+        SUBRAYADO = '\033[4m'
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public static
+    os.system('cls')
+    print(ColoresMain.AZUL + "Bienvenido, Selecciones el maquina de POS" + ColoresMain.RESET)
+    print(esp)
+    print("1. POS-1")
+    print("2. POS-2")
+    print(esp)
+    selectPOS = input(">> ")
+    while True:
+        if selectPOS == "1":
+            time.sleep(0.08)
+            main()
+        elif selectPOS == "2":
+            time.sleep(0.08)
+            loginMax()
+        else:
+            print("Incorrecto>! ")
+            exit()
+
+def loginMax():
+    #chunk[
+    esp = " "
+    #~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
+    class ColoresMain:
+        # Código para resetear el color
+        RESET = "\033[0m"
+        #Códigos de colores
+        ROJO = '\033[31m'
+        NEGRO = '\033[30m'
+        AMARILLO = '\033[33m'
+        AZUL = '\033[34m'
+        VERDE = '\033[32m'
+        MAGENTA = '\033[35m'
+        CIAN = '\033[36m'
+        BLANCO = '\033[37m'
+        SUBRAYADO = '\033[4m'
+    #end chunk]
+    
+    # verificacion CAPTCHAT de Edwin
+    def VerficationCAPTCHATForEdmin():
+        randNum1 = random.randrange(0, 20)
+        randNum2 = random.randrange(0, 10) 
+        resultado_correcto = randNum1 + randNum2
+        try:
+            respuesta_usuario = int(input(f"¿Cuánto es {randNum1} + {randNum2}? "))
+        except ValueError:
+            print("Entrada inválida. Por favor, ingresa un número entero.")
+            exit() # Salir del programa si la entrada no es un número
+
+        # Verificamos si la respuesta del usuario es correcta
+        if respuesta_usuario == resultado_correcto:
+            print("¡Correcto! Has acertado.")
+        else:
+            print(f"Incorrecto. La respuesta correcta era {resultado_correcto}.")   
+    # verificacion CAPTCHAT de Edwin       
+    def VerficationCAPTCHATForEdmin2():
+        LineFault = "----------------------------------------------"
+        randNum1 = random.randrange(0, 20)
+        randNum2 = random.randrange(0, 10)
+        outnumResultFix = randNum1 + randNum2 #fix result
+        print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
+        print(ColoresMain.MAGENTA)
+        #print(" 001    <<<<<Write to Exit System.")
+        #print(" 002    <<<<<Write to Return Main.")
+        print(ColoresMain.RESET)
+        print(esp)
+        print("Cuanto es",randNum1,"+",randNum2,"?")
+        print(esp)
+        
+        inputnumResultFix = int(input("Ingrese> "))
+        if inputnumResultFix == outnumResultFix:
+            os.system('cls')
+            print(LineFault)
+            print(ColoresMain.VERDE,"Capt-CHAT Verificado Correcto.",ColoresMain.RESET)
+            print(LineFault)
+            time.sleep(2)
+            os.system('cls')
+        elif inputnumResultFix == "001":
+            os.system('cls')
+            print("Success exit system!.")
+        elif inputnumResultFix == "002":
+            time.sleep(0.05)
+            return
+        else:
+            os.system('cls')
+            print(LineFault)
+            print(ColoresMain.ROJO,"CAPT-CHAT:>  Incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"3s",ColoresMain.RESET)
+            print(LineFault)
+            time.sleep(1)
+            os.system('cls')
+            print(LineFault)
+            print(ColoresMain.ROJO,"CAPT-CHAT:>  Incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"2s",ColoresMain.RESET)
+            print(LineFault)
+            time.sleep(1)
+            os.system('cls')
+            print(LineFault)
+            print(ColoresMain.ROJO,"CAPT-CHAT:>  Incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"1s",ColoresMain.RESET)
+            print(LineFault)
+            time.sleep(1)
+            # return in capt,  reset
+            os.system('cls')
+            VerficationCAPTCHATForEdmin2()
+            
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public stateic
+    while True: 
+        os.system('cls')
+        print(ColoresMain.MAGENTA,"---Acceso---",ColoresMain.RESET)
+        print(esp)
+        entradaAccount = input("Ingrese la cuenta: ")
+        entradaPwd = getpass.getpass("Ingrese la contraseña")
+                  
+        PosVerification = entradaAccount + entradaPwd # El POS Verifica la cuenta y pwd %$
+        
+        if PosVerification == "admin1234":
+            print(esp)
+            VerficationCAPTCHATForEdmin2() # verificar BOT!?
+            print(ColoresMain.VERDE + "Correcto!, " + ColoresMain.RESET)
+            print(esp)
+            exit()
+        else:
+            print(esp)
+            print(ColoresMain.ROJO + "Incorrecto!> " + ColoresMain.RESET)
+            exit()
+      
+def main(): 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
     class ColoresMain:
         # Código para resetear el color
@@ -386,4 +526,4 @@ def randomLoteria():
     
 # Cuando inicia el programa para que inicie el |def| de "main()"
 if __name__ == "__main__":
-    main()
+    mainPos()
