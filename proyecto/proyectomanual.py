@@ -88,6 +88,7 @@ def loginMax():
             outnumResultFix = randNum1 + randNum2 #fix result
             print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
             print(ColoresMain.MAGENTA,"》",ColoresMain.RESET,"Eres robot o humano?")
+
             if intentos == 3:
                 print(esp)
                 print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
@@ -118,6 +119,7 @@ def loginMax():
                 print(LineFault)
                 time.sleep(2)
                 os.system('cls')
+                return
             elif inputnumResultFix == "001":
                 os.system('cls')
                 print("Success exit system!.")
@@ -193,7 +195,7 @@ def loginMax():
                     print(esp)
                     time.sleep(1)
                     exit() 
-            
+            ##
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public stateic
     while True: 
         os.system('cls')
@@ -201,21 +203,21 @@ def loginMax():
         print(esp)
         entradaAccount = input("Ingrese la cuenta: ")
         entradaPwd = getpass.getpass("Ingrese la contraseña")
-                  
+                
         PosVerification = entradaAccount + entradaPwd # El POS Verifica la cuenta y pwd %$
         
         if PosVerification == "admin1234":
             print(esp)
             VerficationCAPTCHATForEdmin2() # verificar BOT!?
-            print(ColoresMain.VERDE + "Correcto!, " + ColoresMain.RESET)
+            print(ColoresMain.VERDE + "Correcto! de la contrasena, " + ColoresMain.RESET)
             print(esp)
             exit()
         else:
             print(esp)
             VerficationCAPTCHATForEdmin2()
-            print(ColoresMain.ROJO + "Incorrecto!> " + ColoresMain.RESET)
+            print(ColoresMain.ROJO + "Incorrecto! Contrasena > " + ColoresMain.RESET)
             exit()
-      
+    
 def main(): 
     
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
@@ -594,7 +596,7 @@ def randomLoteria():
             print("Saliendo del programa...")
             time.sleep(2)
             exit()
-    
+
 # Cuando inicia el programa para que inicie el |def| de "main()"
 if __name__ == "__main__":
     mainPos()
