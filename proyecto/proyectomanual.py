@@ -76,54 +76,123 @@ def loginMax():
             print("¡Correcto! Has acertado.")
         else:
             print(f"Incorrecto. La respuesta correcta era {resultado_correcto}.")   
+    
     # verificacion CAPTCHAT de Edwin       
     def VerficationCAPTCHATForEdmin2():
-        LineFault = "----------------------------------------------"
-        randNum1 = random.randrange(0, 20)
-        randNum2 = random.randrange(0, 10)
-        outnumResultFix = randNum1 + randNum2 #fix result
-        print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
-        print(ColoresMain.MAGENTA)
-        #print(" 001    <<<<<Write to Exit System.")
-        #print(" 002    <<<<<Write to Return Main.")
-        print(ColoresMain.RESET)
-        print(esp)
-        print("Cuanto es",randNum1,"+",randNum2,"?")
-        print(esp)
+        intentos = 4
+        while intentos >= 0:
+            
+            LineFault = "----------------------------------------------"
+            randNum1 = random.randrange(0, 20)
+            randNum2 = random.randrange(0, 10)
+            outnumResultFix = randNum1 + randNum2 #fix result
+            print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
+            print(ColoresMain.MAGENTA,"》",ColoresMain.RESET,"Eres robot o humano?")
+            if intentos == 3:
+                print(esp)
+                print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
+                print(">>>","Te quedan",ColoresMain.VERDE, 3 ,ColoresMain.RESET,"intentos.")
+                print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
+            elif intentos == 2:
+                print(esp)
+                print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
+                print(">>>","Te quedan",ColoresMain.AMARILLO, 2 ,ColoresMain.RESET,"intentos.")
+                print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
+            elif intentos == 1:
+                print(esp)
+                print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
+                print(">>>","Te quedan",ColoresMain.ROJO, 1 ,ColoresMain.RESET,"intentos.")
+                print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
+            #print(" 001    <<<<<Write to Exit System.")
+            #print(" 002    <<<<<Write to Return Main.")
+            print(ColoresMain.RESET)
+            print(esp)
+            print("Cuanto es",randNum1,"+",randNum2,"?")
+            print(esp)
         
-        inputnumResultFix = int(input("Ingrese> "))
-        if inputnumResultFix == outnumResultFix:
-            os.system('cls')
-            print(LineFault)
-            print(ColoresMain.VERDE,"Capt-CHAT Verificado Correcto.",ColoresMain.RESET)
-            print(LineFault)
-            time.sleep(2)
-            os.system('cls')
-        elif inputnumResultFix == "001":
-            os.system('cls')
-            print("Success exit system!.")
-        elif inputnumResultFix == "002":
-            time.sleep(0.05)
-            return
-        else:
-            os.system('cls')
-            print(LineFault)
-            print(ColoresMain.ROJO,"CAPT-CHAT:>  Incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"3s",ColoresMain.RESET)
-            print(LineFault)
-            time.sleep(1)
-            os.system('cls')
-            print(LineFault)
-            print(ColoresMain.ROJO,"CAPT-CHAT:>  Incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"2s",ColoresMain.RESET)
-            print(LineFault)
-            time.sleep(1)
-            os.system('cls')
-            print(LineFault)
-            print(ColoresMain.ROJO,"CAPT-CHAT:>  Incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"1s",ColoresMain.RESET)
-            print(LineFault)
-            time.sleep(1)
-            # return in capt,  reset
-            os.system('cls')
-            VerficationCAPTCHATForEdmin2()
+            inputnumResultFix = int(input("Ingrese> "))
+            if inputnumResultFix == outnumResultFix:
+                os.system('cls')
+                print(LineFault)
+                print(ColoresMain.VERDE,"Capt-CHAT Verificado Correcto.",ColoresMain.RESET)
+                print(LineFault)
+                time.sleep(2)
+                os.system('cls')
+            elif inputnumResultFix == "001":
+                os.system('cls')
+                print("Success exit system!.")
+            elif inputnumResultFix == "002":
+                time.sleep(0.05)
+                return
+            else:
+                intentos -= 1
+                if intentos > 0:
+                    if intentos == 3:
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.VERDE,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"3s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.VERDE,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"2s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.VERDE,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"1s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                    elif intentos == 2:
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.AMARILLO,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"3s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.AMARILLO,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"2s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.AMARILLO,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"1s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                    elif intentos == 1:
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.ROJO,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"3s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.ROJO,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"2s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                        print(LineFault)
+                        print(ColoresMain.RESET,"CAPT-CHAT:> Te quedan",ColoresMain.ROJO,intentos,ColoresMain.RESET," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"1s",ColoresMain.RESET)
+                        print(LineFault)
+                        time.sleep(1)
+                        os.system('cls')
+                    else:
+                        #por si sale error en algo, sale el Debug,
+                        print("Error de calculos portunidad!. ")
+                    # return in capt,  reset
+                    #os.system('cls')
+                    #VerficationCAPTCHATForEdmin2()
+                else: 
+                    # cuando se te acaba la portunidad
+                    os.system('cls') 
+                    print(LineFault)
+                    print(ColoresMain.ROJO,"CAPT-CHAT:> Te quedan","0"," incorrecto intente de nuevo!.",ColoresMain.AMARILLO,"0s",ColoresMain.RESET)
+                    print(LineFault)
+                    print(esp)
+                    time.sleep(1)
+                    exit() 
             
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~public stateic
     while True: 
@@ -143,10 +212,12 @@ def loginMax():
             exit()
         else:
             print(esp)
+            VerficationCAPTCHATForEdmin2()
             print(ColoresMain.ROJO + "Incorrecto!> " + ColoresMain.RESET)
             exit()
       
 def main(): 
+    
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
     class ColoresMain:
         # Código para resetear el color
