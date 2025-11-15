@@ -8,6 +8,9 @@ import random
 
 def mainPos():
     esp = " " #chunk
+    ##delayk1 = time.sleep(1)
+    ##delayk2 = time.sleep(2)
+    ##delaykc = time.sleep(5)
     #~~~~~~Definir códigos de color ANSI，  CONFIG COLOR
     class ColoresMain:
         # Código para resetear el color
@@ -79,16 +82,55 @@ def loginMax():
     
     # verificacion CAPTCHAT de Edwin       
     def VerficationCAPTCHATForEdmin2():
+        # Extencion de funcion para no dar ERROR, para acceder varios dispositivos 
+        class ColoresMain:
+            # Código para resetear el color
+            RESET = "\033[0m"
+            #Códigos de colores
+            ROJO = '\033[31m'
+            NEGRO = '\033[30m'
+            AMARILLO = '\033[33m'
+            AZUL = '\033[34m'
+            VERDE = '\033[32m'
+            MAGENTA = '\033[35m'
+            CIAN = '\033[36m'
+            BLANCO = '\033[37m'
+            SUBRAYADO = '\033[4m'
+        #chunk 2
+        import os
+        import random
+        import time
+        esp = " "
+        #end chunk]
+        
         intentos = 4
         while intentos >= 0:
             
-            LineFault = "----------------------------------------------"
-            randNum1 = random.randrange(0, 20)
-            randNum2 = random.randrange(0, 10)
-            outnumResultFix = randNum1 + randNum2 #fix result
-            print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
-            print(ColoresMain.MAGENTA,"》",ColoresMain.RESET,"Eres robot o humano?")
+            #LineFault = "----------------------------------------------"
+            #randNum1 = random.randrange(0, 20)
+            #randNum2 = random.randrange(0, 10)
+            #outnumResultFix = randNum1 + randNum2 #fix result
+            
+            #print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
+            #print(esp)
+            #print(ColoresMain.MAGENTA,"》",ColoresMain.RESET,"Eres robot o humano?")
 
+            # por si escribe numero decimal o letras simbolo y sale error del sistema
+            try:
+                LineFault = "----------------------------------------------"
+                randNum1 = random.randrange(0, 20)
+                randNum2 = random.randrange(0, 10)
+                outnumResultFix = randNum1 + randNum2 #fix result
+                
+                print(ColoresMain.AZUL + "|||||| CAPTCAHT! ||||||" + ColoresMain.RESET)
+                print(esp)
+                print(ColoresMain.MAGENTA,"》",ColoresMain.RESET,"Eres robot o humano?")   
+            except ValueError:
+                os.system('cls')
+                print(ColoresMain.ROJO,"Error de sistema, no puede ingresar nuemro decimal, texto simbolo!",ColoresMain.RESET)
+                #VerficationCAPTCHATForEdmin2() # return e restart
+           
+            
             if intentos == 3:
                 print(esp)
                 print(ColoresMain.ROJO,LineFault,ColoresMain.RESET)
@@ -215,7 +257,7 @@ def loginMax():
         else:
             print(esp)
             VerficationCAPTCHATForEdmin2()
-            print(ColoresMain.ROJO + "Incorrecto! Contrasena > " + ColoresMain.RESET)
+            print(ColoresMain.ROJO + "Incorrecto! usuario o  Contrasena > " + ColoresMain.RESET)
             exit()
     
 def main(): 
@@ -257,7 +299,93 @@ def main():
             #Cargando sumulator |falso|
             print("Descargando pack", numero,"/25")
             time.sleep(0.02)
-                
+        
+        # las cargas de ciglo
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|                       |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|//                     |") 
+        print(esp)      
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|///                    |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|//////                 |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|//////////             |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|/////////////          |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|///////////////        |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|///////////////////    |")
+        print(esp)
+        time.sleep(1)
+        os.system('cls')
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print(esp)
+        print("|///////////////////////|")
+        print(esp)
+        time.sleep(2)
+        #print("|                                    |")
+        #print("|                                    |")
+        #print("|                                    |") 
         while True:
             time.sleep(1)
             print(esp)
